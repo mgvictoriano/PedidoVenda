@@ -11,6 +11,10 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://jakarta.apache.org/xml/ns/javaee" location="$PROJECT_DIR$" />
+    <resource url="http://jakarta.apache.org/xml/ns/javaee/web-app_4_0.xsd" location="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
