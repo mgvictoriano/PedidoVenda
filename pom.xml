@@ -13,6 +13,7 @@
 
     <dependencies>
 
+        <!-- Dependência para JUnit para testes -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -20,6 +21,7 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Dependência para Jakarta EE API (Jakarta Servlet) -->
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
@@ -27,6 +29,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Dependência para JSF API -->
         <dependency>
             <groupId>javax.faces</groupId>
             <artifactId>javax.faces-api</artifactId>
@@ -34,6 +37,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Dependência para PrimeFaces -->
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -46,6 +50,7 @@
     <build>
         <finalName>PedidoVenda</finalName>
         <plugins>
+            <!-- Plugin do compilador Maven -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,6 +60,7 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+            <!-- Plugin do Maven WAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
