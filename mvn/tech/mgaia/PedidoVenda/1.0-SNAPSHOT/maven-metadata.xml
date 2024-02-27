@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>tech.mgaia</groupId>
+  <artifactId>PedidoVenda</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20240227.124123</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20240227124123</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>war</extension>
+        <value>1.0-20240227.124123-1</value>
+        <updated>20240227124123</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20240227.124123-1</value>
+        <updated>20240227124123</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
