@@ -5,6 +5,19 @@
       <element id="module-output" name="PedidoVenda" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/primefaces/primefaces/12.0.0/primefaces-12.0.0.jar" path-in-jar="/" />
       <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Maven: jakarta.faces:jakarta.faces-api:4.0.1" />
+        <element id="library" level="project" name="Maven: jakarta.platform:jakarta.jakartaee-web-api:9.0.0" />
+        <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:6.0.0" />
+        <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+        <element id="library" level="project" name="Maven: org.apiguardian:apiguardian-api:1.1.2" />
+        <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.5.3.Final" />
+        <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.9.2" />
+        <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.9.2" />
+        <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.2.0" />
+        <element id="library" level="project" name="Maven: org.primefaces:primefaces:12.0.0" />
+        <element id="library" level="project" name="Maven: org.wildfly:wildfly-client-all:27.0.1.Final" />
+      </element>
     </root>
   </artifact>
 </component>
