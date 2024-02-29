@@ -11,19 +11,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><ui:insert name="titulo"> Sistema de Pedido de Venda </ui:insert></title>
     <h:outputStylesheet library="css" name="sistema.css"/>
+    <h:outputScript library="js" name="jquery.maskMoney.js"/>
 
 </h:head>
 
 <h:body>
-    <p:ajaxStatus styleClass="ajax-status">
+
+    <p:ajaxStatus styleClass="ajax-status" onsuccess="configurarMoeda()">
         <f:facet name="star">
-            <h:graphicImage library="images" nome=""> </h:graphicImage>
+            <h:graphicImage library="images" nome="loading.gif"> </h:graphicImage>
         </f:facet>
 
         <f:facet name="complete">
             <h:outputText value=""/>
         </f:facet>
     </p:ajaxStatus>
+
     <div id="page">
         <div id="header">
             <ui:insert name="header">
@@ -32,23 +35,29 @@
                 </h:link>
             </ui:insert>
         </div>
-
-        <div id="content">
-            <ui:insert name="content">
-                <ui:include src=" "/>
-            </ui:insert>
-        </div>
-
-        <div id="footer">
-            <ui:insert name="footer">
-                By <a href="https://mgaia.tech" target="mGaia.tech"/>
-            </ui:insert>
-        </div>
-
     </div>
 
-    <div>
+    <div id="content">
+        <ui:insert name="content">
+            <ui:include src=" "/>
+        </ui:insert>
     </div>
+
+    <div id="footer">
+        <ui:insert name="footer">
+            By <a href="https://mgaia.tech" target="mGaia.tech"/>
+        </ui:insert>
+    </div>
+
+    <script type="javascript">
+        function configurarMoeda() {
+            $(".moeda").maskMoney({ decimal: ",", thousands: ".", allowZero: true});
+        }
+        $(document).ready(function () {
+            configurarMoeda();
+        })
+    </script>
+
 </h:body>
 
 </html>
