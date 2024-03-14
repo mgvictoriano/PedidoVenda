@@ -1,6 +1,7 @@
 package tech.mgaia.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,6 +25,7 @@ public class Cliente implements Serializable {
     @Column(name = "nome_cliente", nullable = false)
     private String nome;
 
+    @Email
     @Column(unique = true, nullable = false, length = 30, name = "email")
     private String email;
 

@@ -1,8 +1,8 @@
 package tech.mgaia.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -12,6 +12,9 @@ import java.util.List;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Entity
 @Table(name = "pedido")
 public class Pedido implements Serializable {
@@ -22,6 +25,7 @@ public class Pedido implements Serializable {
     @GeneratedValue
     private Long id;
 
+    @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, length = 30, name = "data_criacao")
     private Date dataCriacao;
@@ -46,13 +50,16 @@ public class Pedido implements Serializable {
     @Enumerated(EnumType.STRING)
     private StatusPedido status;
 
+    @NotNull
     @Column(nullable = false, length = 30, name = "forma_pagamento")
     private FormaPagamento formaPagamento;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "vendedor_id", nullable = false, foreignKey = @ForeignKey(name = "fk_pedido_vendedor"))
     private Usuario vendedor;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false, foreignKey = @ForeignKey(name = "fk_pedido_cliente"))
     private Cliente cliente;
