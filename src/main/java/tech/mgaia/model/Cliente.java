@@ -12,6 +12,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@Table(name = "cliente")
 public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,9 +21,17 @@ public class Cliente implements Serializable {
     @GeneratedValue
     private Long id;
 
+    @Column(name = "nome_cliente", nullable = false)
     private String nome;
+
+    @Column(unique = true, nullable = false, length = 30, name = "email")
     private String email;
+
+    @Column(nullable = false, length = 14, name = "cpf_cnpj")
     private String documentoReceitaFederal;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 10, name = "tipo_pessoa") // Física ou Jurídica.
     private TipoPessoa tipoPessoa;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)

@@ -25,7 +25,7 @@ public class ItemPedido implements Serializable {
     @Column(nullable = false, precision = 10, scale = 2, name = "valor_unitario")
     private BigDecimal valorUnitario;
 
-
+    @Column(precision = 10, scale = 2, name = "valor_desconto")
     private BigDecimal desconto;
 
     @ManyToOne

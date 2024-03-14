@@ -1,9 +1,6 @@
 package tech.mgaia.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,6 +10,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@Table(name = "endereco")
 public class Endereco implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -21,14 +19,26 @@ public class Endereco implements Serializable {
     @GeneratedValue
     private Long id;
 
+    @Column(nullable = false, length = 150, name = "logradouro")
     private String logradouro;
+
+    @Column(nullable = false, length = 10, name = "numero")
     private String numero;
+
+    @Column(length = 150, name = "complemento")
     private String complemento;
+
+    @Column(nullable = false, length = 150, name = "bairro")
     private String cidade;
+
+    @Column(nullable = false, length = 2, name = "uf")
     private String uf;
+
+    @Column(nullable = false, length = 9, name = "cep")
     private String cep;
 
     @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false, foreignKey = @ForeignKey(name = "fk_endereco_cliente"))
     private Cliente cliente;
 
     @Override
