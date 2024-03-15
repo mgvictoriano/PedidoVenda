@@ -3,6 +3,7 @@ package tech.mgaia.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import tech.mgaia.validation.SKU;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -27,16 +28,17 @@ public class Produto implements Serializable {
     @Column(nullable = false, length = 100, name = "nome_produto")
     private String nome;
 
-    @NotNull
-    @Min(0) @Max(9999)
+    @NotNull(message = "é obrigatório")
+    @Min(0) @Max(value = 9999,  message = "deve ser entre 0 e 9999")
     @Column(nullable = false, length = 100, name = "quantidade_estoque")
     private Integer quantidadeEstoque;
 
     @NotBlank
+    @SKU
     @Column(nullable = false, length = 100, name = "sku")
     private String sku;
 
-    @NotNull
+    @NotNull(message = "é obrigatório")
     @Column(name = "valor_unitario", nullable = false)
     private BigDecimal valorUnitario;
 
